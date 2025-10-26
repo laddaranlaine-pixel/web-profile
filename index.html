@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elaine's Haunted Profile</title>
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/73/Pumpkin_icon.png">
+<title>Elaine's Flower Aesthetic Profile</title>
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/0a/Cherry_Blossom_icon.png">
 <style>
 /* ===== Fonts ===== */
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Creepster', cursive;
+    font-family: 'Pacifico', cursive;
 }
 
 body {
-    background: linear-gradient(135deg, #0d000d, #3a0a57);
-    color: #f5f5f5;
+    background: linear-gradient(135deg, #ffe0e9, #fff5f8);
+    color: #4a3f3f;
     overflow-x: hidden;
 }
 
@@ -28,17 +28,17 @@ header.navbar {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(255, 255, 255, 0.7);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid #ff7518;
+    border-bottom: 2px solid #ff8fb1;
 }
 
 header.navbar .logo {
     font-size: 2rem;
-    color:#ff7518;
-    text-shadow:0 0 10px #ff7518;
+    color: #ff6f91;
+    text-shadow: 0 0 8px #ffc1e3;
 }
 
 header.navbar nav ul {
@@ -48,7 +48,7 @@ header.navbar nav ul {
 }
 
 header.navbar nav ul li a {
-    color:#ff7518;
+    color:#ff6f91;
     text-decoration:none;
     font-weight:bold;
     position:relative;
@@ -59,7 +59,7 @@ header.navbar nav ul li a::after {
     position:absolute;
     width:0;
     height:2px;
-    background:#ff7518;
+    background:#ff6f91;
     bottom:-5px;
     left:0;
     transition:0.3s;
@@ -90,8 +90,8 @@ header.navbar nav ul li a:hover::after {
 .hero-left img {
     width:250px;
     border-radius:50%;
-    border:5px solid #ff7518;
-    box-shadow:0 0 30px #ff7518;
+    border:5px solid #ffb6c1;
+    box-shadow:0 0 30px #ffd6e0;
     animation:float 4s ease-in-out infinite;
 }
 
@@ -102,13 +102,13 @@ header.navbar nav ul li a:hover::after {
 
 .hero-right h1 {
     font-size:2.5rem;
-    color:#ff7518;
-    text-shadow:0 0 10px #ff7518;
+    color:#ff6f91;
+    text-shadow:0 0 10px #ffc1e3;
 }
 
 .hero-right p {
     font-size:1.2rem;
-    color:#fff0c0;
+    color:#9e6f7b;
     margin-top:10px;
 }
 
@@ -120,8 +120,8 @@ header.navbar nav ul li a:hover::after {
 }
 
 .hero-right .social-links a {
-    background:#ff7518;
-    color:#1a000d;
+    background:#ffb6c1;
+    color:#fff;
     padding:10px 20px;
     border-radius:15px;
     text-decoration:none;
@@ -129,8 +129,8 @@ header.navbar nav ul li a:hover::after {
 }
 
 .hero-right .social-links a:hover {
-    background:#fff0c0;
-    color:#1a000d;
+    background:#ffd6e0;
+    color:#ff6f91;
     transform:scale(1.1);
 }
 
@@ -145,33 +145,34 @@ header.navbar nav ul li a:hover::after {
 }
 
 .project-card {
-    background:rgba(30,0,30,0.85);
+    background:rgba(255, 240, 245, 0.8);
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(255,117,24,0.5);
+    box-shadow:0 5px 20px rgba(255,111,145,0.5);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform:translateY(-10px);
-    box-shadow:0 10px 30px rgba(255,117,24,0.8);
+    box-shadow:0 10px 30px rgba(255,111,145,0.8);
 }
 
 .project-card img {
     width:100%;
     height:180px;
     object-fit:cover;
+    border-bottom: 3px solid #ffc1e3;
 }
 
 .project-card h3 {
     padding:10px;
-    color:#ff7518;
+    color:#ff6f91;
     text-align:center;
 }
 
 .project-card p {
     padding:0 10px 10px;
-    color:#fff0c0;
+    color:#9e6f7b;
     text-align:center;
 }
 
@@ -203,18 +204,18 @@ header.navbar nav ul li a:hover::after {
 }
 
 .skill-circle .bg {
-    stroke:#2e001f;
+    stroke:#ffd6e0;
 }
 
 .skill-circle .progress {
-    stroke:#ff7518;
+    stroke:#ff6f91;
     stroke-dasharray: 377;
     stroke-dashoffset:377;
     transition: stroke-dashoffset 1s ease;
 }
 
 .skill-circle text {
-    fill:#ff7518;
+    fill:#ff6f91;
     font-size:14px;
     text-anchor:middle;
     dominant-baseline:middle;
@@ -233,13 +234,13 @@ header.navbar nav ul li a:hover::after {
 }
 
 .hobby-icon {
-    background:rgba(255,117,24,0.8);
+    background:#ffb6c1;
     padding:15px;
     border-radius:50%;
     font-weight:bold;
-    color:#1a000d;
+    color:#fff;
     font-size:1rem;
-    box-shadow:0 0 15px #ff7518;
+    box-shadow:0 0 15px #ffc1e3;
     animation:floatHobby 4s ease-in-out infinite;
 }
 
@@ -262,12 +263,12 @@ header.navbar nav ul li a:hover::after {
     top:0;
     bottom:0;
     width:4px;
-    background:#ff7518;
+    background:#ff6f91;
     transform:translateX(-50%);
 }
 
 .edu-card {
-    background:rgba(30,0,30,0.85);
+    background:rgba(255, 240, 245, 0.8);
     width:45%;
     padding:20px;
     border-radius:20px;
@@ -283,7 +284,7 @@ header.navbar nav ul li a:hover::after {
     position:absolute;
     width:20px;
     height:20px;
-    background:#ff7518;
+    background:#ff6f91;
     border-radius:50%;
     top:50%;
     transform:translateY(-50%);
@@ -293,7 +294,7 @@ header.navbar nav ul li a:hover::after {
 /* ===== Contact ===== */
 #contact {
     position:relative;
-    background:#1a000d;
+    background:#fff0f5;
     padding:80px 20px;
     text-align:center;
     overflow:hidden;
@@ -313,29 +314,29 @@ header.navbar nav ul li a:hover::after {
 .contact-form textarea {
     padding:10px;
     border-radius:15px;
-    border:2px solid #ff7518;
-    background:#1a000d;
-    color:#fff0c0;
+    border:2px solid #ff6f91;
+    background:#fff5f8;
+    color:#4a3f3f;
 }
 
 .contact-form button {
     padding:12px;
     border-radius:25px;
     border:none;
-    background:#ff7518;
-    color:#1a000d;
+    background:#ff6f91;
+    color:#fff;
     font-weight:bold;
     cursor:pointer;
 }
 
 .contact-form button:hover {
-    background:#fff0c0;
-    color:#1a000d;
+    background:#ffc1e3;
+    color:#4a3f3f;
     transform:scale(1.05);
 }
 
-/* ===== Halloween Fog Particles ===== */
-#halloween-particles {
+/* ===== Floating Petals ===== */
+#flower-particles {
     position: fixed;
     top: 0;
     left: 0;
@@ -346,36 +347,26 @@ header.navbar nav ul li a:hover::after {
     z-index: 0;
 }
 
-.particle {
+.petal {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 117, 24, 0.1); /* soft orange glow */
+    background: rgba(255, 182, 193, 0.3);
     pointer-events: none;
-    opacity: 0.05;
-    animation-name: floatFog;
+    animation-name: floatPetal;
     animation-timing-function: linear;
 }
 
-@keyframes floatFog {
-    0% {
-        transform: translateY(100vh) translateX(0) scale(0.5);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.1;
-    }
-    100% {
-        transform: translateY(-50vh) translateX(50px) scale(1.5);
-        opacity: 0;
-    }
+@keyframes floatPetal {
+    0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0;}
+    50% { opacity: 0.5;}
+    100% { transform: translateY(-50vh) translateX(50px) rotate(360deg); opacity: 0;}
 }
 </style>
 </head>
-
 <body>
 
-<!-- Particle Animation Container -->
-<div id="halloween-particles"></div>
+<!-- Petals Animation Container -->
+<div id="flower-particles"></div>
 
 <!-- Navbar -->
 <header class="navbar">
@@ -395,11 +386,11 @@ header.navbar nav ul li a:hover::after {
 <!-- Hero Section -->
 <section class="hero" id="hero">
     <div class="hero-left">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Pumpkin_icon.png" alt="Elaine">
+        <img src="elaine.jpg" alt="Elaine">
     </div>
     <div class="hero-right">
-        <h1>Elaine's Haunted Web World</h1>
-        <p>Crafting spooky websites, eerie animations, and haunted designs with Halloween vibes!</p>
+        <h1>Elaine's Flower Aesthetic</h1>
+        <p>Crafting soft, pastel, floral websites with gentle animations and aesthetic vibes!</p>
         <div class="social-links">
             <a href="#">GitHub</a>
             <a href="#">Instagram</a>
@@ -410,38 +401,38 @@ header.navbar nav ul li a:hover::after {
 
 <!-- Projects -->
 <section id="projects">
-    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Spooky Projects</h2>
+    <h2 style="text-align:center; margin-top:40px; color:#ff6f91;">Projects</h2>
     <div class="projects-container" id="projects-container"></div>
 </section>
 
 <!-- Skills -->
 <section id="skills">
-    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Skills</h2>
+    <h2 style="text-align:center; margin-top:40px; color:#ff6f91;">Skills</h2>
     <div class="skills-container" id="skills-container"></div>
 </section>
 
 <!-- Hobbies -->
 <section id="hobbies">
-    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Hobbies</h2>
+    <h2 style="text-align:center; margin-top:40px; color:#ff6f91;">Hobbies</h2>
     <div id="hobbies-container"></div>
 </section>
 
 <!-- Education -->
 <section id="education">
-    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Education</h2>
+    <h2 style="text-align:center; margin-top:40px; color:#ff6f91;">Education</h2>
     <div class="education-cards">
-        <article class="edu-card"><h3>Haunted High School</h3><p>Learned spooky arts & tech tricks.</p></article>
-        <article class="edu-card"><h3>Cryptic University</h3><p>Advanced web dev and ghost animations.</p></article>
+        <article class="edu-card"><h3>Blossom High School</h3><p>Learned web design with pastel aesthetics.</p></article>
+        <article class="edu-card"><h3>Petal University</h3><p>Advanced frontend development and soft design.</p></article>
     </div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
-    <h2 style="color:#ff7518;">Contact Me</h2>
+    <h2 style="color:#ff6f91;">Contact Me</h2>
     <form class="contact-form">
         <input type="text" placeholder="Name" required>
         <input type="email" placeholder="Email" required>
-        <textarea placeholder="Send me a spooky message..." required></textarea>
+        <textarea placeholder="Send me a message..." required></textarea>
         <button type="submit">Send</button>
     </form>
 </section>
@@ -494,30 +485,24 @@ fetch('data.json')
     });
 });
 
-// Halloween Particles
-const particleContainer = document.getElementById('halloween-particles');
-const particleImages = [
-    'https://i.ibb.co/5K3W3hD/bat.png',
-    'https://i.ibb.co/1zR0kZB/pumpkin.png'
-];
+// Flower Petals Animation
+const particleContainer = document.getElementById('flower-particles');
 
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    particle.style.backgroundImage = `url(${particleImages[Math.floor(Math.random() * particleImages.length)]})`;
-    particle.style.left = Math.random() * 100 + 'vw';
+function createPetal() {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.style.left = Math.random() * 100 + 'vw';
     const size = 20 + Math.random() * 30;
-    particle.style.width = size + 'px';
-    particle.style.height = size + 'px';
+    petal.style.width = size + 'px';
+    petal.style.height = size + 'px';
     const duration = 5 + Math.random() * 5;
-    particle.style.animationDuration = duration + 's';
-    particleContainer.appendChild(particle);
-    setTimeout(() => { particle.remove(); }, duration * 1000);
+    petal.style.animationDuration = duration + 's';
+    particleContainer.appendChild(petal);
+    setTimeout(() => { petal.remove(); }, duration * 1000);
 }
 
-setInterval(createParticle, 300);
+setInterval(createPetal, 300);
 </script>
-
 
 </body>
 </html>
