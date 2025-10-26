@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elaine's Haunted Profile</title>
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/73/Pumpkin_icon.png">
+<style>
+/* ===== Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Creepster', cursive;
+}
+
+body {
+    background: linear-gradient(135deg, #0d000d, #3a0a57);
+    color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #ff7518;
+}
+
+header.navbar .logo {
+    font-size: 2rem;
+    color:#ff7518;
+    text-shadow:0 0 10px #ff7518;
+}
+
+header.navbar nav ul {
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+header.navbar nav ul li a {
+    color:#ff7518;
+    text-decoration:none;
+    font-weight:bold;
+    position:relative;
+}
+
+header.navbar nav ul li a::after {
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    background:#ff7518;
+    bottom:-5px;
+    left:0;
+    transition:0.3s;
+}
+
+header.navbar nav ul li a:hover::after {
+    width:100%;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding:80px 50px;
+    min-height:90vh;
+    position: relative;
+    overflow:hidden;
+    z-index:1;
+}
+
+.hero-left, .hero-right {
+    flex:1;
+    padding:20px;
+    z-index:1;
+}
+
+.hero-left img {
+    width:250px;
+    border-radius:50%;
+    border:5px solid #ff7518;
+    box-shadow:0 0 30px #ff7518;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+.hero-right h1 {
+    font-size:2.5rem;
+    color:#ff7518;
+    text-shadow:0 0 10px #ff7518;
+}
+
+.hero-right p {
+    font-size:1.2rem;
+    color:#fff0c0;
+    margin-top:10px;
+}
+
+.hero-right .social-links {
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hero-right .social-links a {
+    background:#ff7518;
+    color:#1a000d;
+    padding:10px 20px;
+    border-radius:15px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.hero-right .social-links a:hover {
+    background:#fff0c0;
+    color:#1a000d;
+    transform:scale(1.1);
+}
+
+/* ===== Projects ===== */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px;
+    position: relative;
+    z-index:1;
+}
+
+.project-card {
+    background:rgba(30,0,30,0.85);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(255,117,24,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(255,117,24,0.8);
+}
+
+.project-card img {
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.project-card h3 {
+    padding:10px;
+    color:#ff7518;
+    text-align:center;
+}
+
+.project-card p {
+    padding:0 10px 10px;
+    color:#fff0c0;
+    text-align:center;
+}
+
+/* ===== Skills ===== */
+.skills-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+    padding:40px;
+    position: relative;
+    z-index:1;
+}
+
+.skill-circle {
+    position:relative;
+    width:120px;
+    height:120px;
+}
+
+.skill-circle svg {
+    transform:rotate(-90deg);
+}
+
+.skill-circle circle {
+    fill:none;
+    stroke-width:12;
+    stroke-linecap:round;
+}
+
+.skill-circle .bg {
+    stroke:#2e001f;
+}
+
+.skill-circle .progress {
+    stroke:#ff7518;
+    stroke-dasharray: 377;
+    stroke-dashoffset:377;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.skill-circle text {
+    fill:#ff7518;
+    font-size:14px;
+    text-anchor:middle;
+    dominant-baseline:middle;
+}
+
+/* ===== Hobbies ===== */
+#hobbies-container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:40px;
+    position: relative;
+    z-index:1;
+}
+
+.hobby-icon {
+    background:rgba(255,117,24,0.8);
+    padding:15px;
+    border-radius:50%;
+    font-weight:bold;
+    color:#1a000d;
+    font-size:1rem;
+    box-shadow:0 0 15px #ff7518;
+    animation:floatHobby 4s ease-in-out infinite;
+}
+
+@keyframes floatHobby {
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+/* ===== Education Timeline ===== */
+.education-cards {
+    position:relative;
+    padding:50px 20px;
+    z-index:1;
+}
+
+.education-cards::before {
+    content:'';
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:#ff7518;
+    transform:translateX(-50%);
+}
+
+.edu-card {
+    background:rgba(30,0,30,0.85);
+    width:45%;
+    padding:20px;
+    border-radius:20px;
+    position:relative;
+    margin:30px 0;
+}
+
+.edu-card:nth-child(odd) { left:2%; }
+.edu-card:nth-child(even) { left:55%; }
+
+.edu-card::after {
+    content:'';
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#ff7518;
+    border-radius:50%;
+    top:50%;
+    transform:translateY(-50%);
+    left:-10px;
+}
+
+/* ===== Contact ===== */
+#contact {
+    position:relative;
+    background:#1a000d;
+    padding:80px 20px;
+    text-align:center;
+    overflow:hidden;
+    z-index:1;
+}
+
+.contact-form {
+    display:flex;
+    flex-direction:column;
+    max-width:400px;
+    margin:0 auto;
+    gap:15px;
+    z-index:1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding:10px;
+    border-radius:15px;
+    border:2px solid #ff7518;
+    background:#1a000d;
+    color:#fff0c0;
+}
+
+.contact-form button {
+    padding:12px;
+    border-radius:25px;
+    border:none;
+    background:#ff7518;
+    color:#1a000d;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.contact-form button:hover {
+    background:#fff0c0;
+    color:#1a000d;
+    transform:scale(1.05);
+}
+
+/* ===== Halloween Fog Particles ===== */
+#halloween-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 117, 24, 0.1); /* soft orange glow */
+    pointer-events: none;
+    opacity: 0.05;
+    animation-name: floatFog;
+    animation-timing-function: linear;
+}
+
+@keyframes floatFog {
+    0% {
+        transform: translateY(100vh) translateX(0) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(-50vh) translateX(50px) scale(1.5);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Particle Animation Container -->
+<div id="halloween-particles"></div>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">Elaine</div>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Pumpkin_icon.png" alt="Elaine">
+    </div>
+    <div class="hero-right">
+        <h1>Elaine's Haunted Web World</h1>
+        <p>Crafting spooky websites, eerie animations, and haunted designs with Halloween vibes!</p>
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Spooky Projects</h2>
+    <div class="projects-container" id="projects-container"></div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Skills</h2>
+    <div class="skills-container" id="skills-container"></div>
+</section>
+
+<!-- Hobbies -->
+<section id="hobbies">
+    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Hobbies</h2>
+    <div id="hobbies-container"></div>
+</section>
+
+<!-- Education -->
+<section id="education">
+    <h2 style="text-align:center; margin-top:40px; color:#ff7518;">Education</h2>
+    <div class="education-cards">
+        <article class="edu-card"><h3>Haunted High School</h3><p>Learned spooky arts & tech tricks.</p></article>
+        <article class="edu-card"><h3>Cryptic University</h3><p>Advanced web dev and ghost animations.</p></article>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2 style="color:#ff7518;">Contact Me</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Send me a spooky message..." required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<script>
+// Smooth scrolling
+document.querySelectorAll('header nav a').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// Fetch data.json dynamically
+fetch('data.json')
+.then(response => response.json())
+.then(data => {
+    // Projects
+    const projectContainer = document.getElementById('projects-container');
+    data.projects.forEach(p => {
+        const div = document.createElement('div');
+        div.classList.add('project-card');
+        div.innerHTML = `<img src="${p.img}" alt="${p.title}"><h3>${p.title}</h3><p>${p.desc}</p>`;
+        projectContainer.appendChild(div);
+    });
+
+    // Skills
+    const skillsContainer = document.getElementById('skills-container');
+    data.skills.forEach(s => {
+        const div = document.createElement('div');
+        div.classList.add('skill-circle');
+        div.innerHTML = `<svg width="120" height="120">
+            <circle class="bg" cx="60" cy="60" r="60"></circle>
+            <circle class="progress" cx="60" cy="60" r="60"></circle>
+            <text x="60" y="60">${s.name}</text>
+        </svg>`;
+        skillsContainer.appendChild(div);
+        const circle = div.querySelector('.progress');
+        const dash = 377 * (1 - parseInt(s.level) / 100);
+        setTimeout(() => { circle.style.strokeDashoffset = dash; }, 100);
+    });
+
+    // Hobbies
+    const hobbiesContainer = document.getElementById('hobbies-container');
+    data.hobbies.forEach(h => {
+        const div = document.createElement('div');
+        div.classList.add('hobby-icon');
+        div.innerText = h;
+        hobbiesContainer.appendChild(div);
+    });
+});
+
+// Halloween Particles
+const particleContainer = document.getElementById('halloween-particles');
+const particleImages = [
+    'https://i.ibb.co/5K3W3hD/bat.png',
+    'https://i.ibb.co/1zR0kZB/pumpkin.png'
+];
+
+function createParticle() {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.backgroundImage = `url(${particleImages[Math.floor(Math.random() * particleImages.length)]})`;
+    particle.style.left = Math.random() * 100 + 'vw';
+    const size = 20 + Math.random() * 30;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    const duration = 5 + Math.random() * 5;
+    particle.style.animationDuration = duration + 's';
+    particleContainer.appendChild(particle);
+    setTimeout(() => { particle.remove(); }, duration * 1000);
+}
+
+setInterval(createParticle, 300);
+</script>
+
+
+</body>
+</html>

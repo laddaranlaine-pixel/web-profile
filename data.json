@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "title": "Ghost Blog",
+      "desc": "Documenting haunted locations.",
+      "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+    },
+    {
+      "title": "Pumpkin Portfolio",
+      "desc": "Halloween themed web designs.",
+      "img": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+    }
+  ],
+  "skills": [
+    {"name": "HTML & CSS", "level": "90%"},
+    {"name": "JavaScript", "level": "80%"},
+    {"name": "Spooky Animations", "level": "70%"}
+  ],
+  "hobbies": [
+    "Ghost Hunting",
+    "Pumpkin Carving",
+    "Horror Stories",
+    "Potion Making",
+    "Creepy Coding"
+  ]
+}
